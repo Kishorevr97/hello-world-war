@@ -1,6 +1,6 @@
 FROM ubuntu:latest
+WORKDIR /app
 RUN apt update -y
 RUN apt install maven -y
-WORKDIR /app
 COPY . .
 RUN mvn clean package
