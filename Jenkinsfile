@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
     stages {
@@ -17,8 +16,9 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: '0439311a-cf70-4cf2-8fd8-62f91b842e70', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
-            }        sh "docker push kishorevr/hello-world-war:1.0.1"
-        }
+                    sh "docker push kishorevr/hello-world-war:1.0.1"
+                }
+           }
+       }
     }
-  }
 }
