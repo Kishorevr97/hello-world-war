@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN apt update
+RUN apt update -y
 RUN apt install maven -y
 WORKDIR /app
 COPY . .
