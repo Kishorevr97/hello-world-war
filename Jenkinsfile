@@ -20,4 +20,5 @@ pipeline {
             }        sh "docker push kishorevr/hello-world-war:1.0.1"
         }
     }
+  }
 }
